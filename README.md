@@ -1,7 +1,8 @@
 # Ticket API Builder
 
 > Build a simple REST API to manage tickets — including basic CRUD, validations.
-> Live demo [_here_](https://tiketq-app.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
+
+<!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 
@@ -23,7 +24,7 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/ahmadhilmi420/tiketq-app.git
+  git clone https://github.com/ahmadhilmi420/backend-tiketq.git
 ```
 
 Go to the project directory
@@ -134,7 +135,7 @@ Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1" -Method Patch -Body '{"
   Example using PowerShell:
 
 ```powershell
-Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1" -Method Patch -Body '{"isUsed": true}'
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1" -Method Delete
 ```
 
 ## Contact
