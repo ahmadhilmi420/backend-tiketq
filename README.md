@@ -59,6 +59,21 @@ Example using PowerShell:
 Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets" -Method Get
 ```
 
+```
+Result:
+eventName : DWP 2025
+id        : 1
+isUsed    : True
+location  : Jakarta
+time      : 2025-08-31T20:00:00Z
+
+eventName : Java Jazz Festival
+id        : 2
+isUsed    : True
+location  : Jakarta
+time      : 2025-03-01T19:00:00Z
+```
+
 ### View a Specific Ticket
 
 - **Endpoint:** `GET /tickets/:id`
@@ -69,6 +84,14 @@ Example using PowerShell:
 Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1"  -Method Get
 ```
 
+```
+eventName : DWP 2025
+id        : 1
+isUsed    : True
+location  : Jakarta
+time      : 2025-08-31T20:00:00Z
+```
+
 ### Create a New Ticket
 
 - **Endpoint:** `POST /tickets`
@@ -76,15 +99,15 @@ Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1"  -Method Get
 Example using PowerShell:
 
 ```powershell
-Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets" -Method Post -Body '{"id": 9 "eventName": "Festival Bandung", "location": "Bandung", "time": "2025-11-13T19:30:00Z", "isUsed": true}' -ContentType "application/json"
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets" -Method Post -Body '{"id": 9, "eventName": "Festival Jogja", "location": "Yogyakarta", "time": "2025-12-13T19:30:00Z", "isUsed": true}' -ContentType "application/json"
 ```
 
 ```JSON
 {
     "id": 9,
-    "eventName": "Festival Bandung",
-    "location": "Bandung",
-    "time": "2025-11-13T19:30:00Z",
+    "eventName": "Festival Jogja",
+    "location": "Yogyakarta",
+    "time": "2025-12-13T19:30:00Z",
     "isUsed": true
 }
 ```
@@ -96,7 +119,7 @@ Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets" -Method Post -Body '{"id"
 Example using PowerShell:
 
 ```powershell
-Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1" -Method Patch -Body '{"isUsed": true}'
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/tickets/1" -Method Patch -Body '{"isUsed": true}' -ContentType "application/json"
 ```
 
 ```JSON
